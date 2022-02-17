@@ -210,11 +210,7 @@ class _HomeState extends State<Home> {
                 children: [
                   SizedBox(width: size.width * 0.13),
                   GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        doAddition();
-                      });
-                    },
+                    onTap: doAddition,
                     child: Container(
                         height: size.height * 0.16,
                         width: size.width * 0.32,
@@ -228,11 +224,7 @@ class _HomeState extends State<Home> {
                   ),
                   SizedBox(width: size.width * 0.04),
                   GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        doMul();
-                      });
-                    },
+                    onTap: doMul,
                     child: Container(
                         height: size.height * 0.16,
                         width: size.width * 0.32,
@@ -253,11 +245,7 @@ class _HomeState extends State<Home> {
                 children: [
                   SizedBox(width: size.width * 0.13),
                   GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        doSub();
-                      });
-                    },
+                    onTap: doSub,
                     child: Container(
                         height: size.height * 0.16,
                         width: size.width * 0.32,
@@ -271,11 +259,7 @@ class _HomeState extends State<Home> {
                   ),
                   SizedBox(width: size.width * 0.04),
                   GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        doDiv();
-                      });
-                    },
+                    onTap: doDiv,
                     child: Container(
                         height: size.height * 0.16,
                         width: size.width * 0.32,
