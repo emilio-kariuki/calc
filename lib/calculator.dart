@@ -85,6 +85,7 @@ class _HomeState extends State<Home> {
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
+                      suffixIcon: Icon(Icons.clear,color: Colors.black),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
