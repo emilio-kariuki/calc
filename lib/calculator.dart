@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
   final num_1 = TextEditingController();
   final num_2 = TextEditingController();
   final output = TextEditingController();
-  int num1 = 0, num2 = 0, sum = 0;
+  var num1 = 0, num2 = 0, sum = 0;
   void doAddition() {
     setState(() {
       num1 = int.parse(num_1.text);
