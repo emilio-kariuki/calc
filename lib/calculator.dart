@@ -160,9 +160,9 @@ class _HomeState extends State<Home> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  // child: Center(
-                  //   child: Icon(Icons.s,size: 40)
-                  // )
+                  child: Center(
+                    child: SvgPicture.asset("assets/multiply.svg")
+                  )
                 ),
               ],
             ),
@@ -180,7 +180,7 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Icon(Icons.add,size: 40)
+                    child: SvgPicture.asset("assets/minux.svg")
                   )
                 ),
                 SizedBox(width: size.width * 0.04),
@@ -192,7 +192,7 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Icon(Icons.add,size: 40)
+                    child: SvgPicture.asset("assets/divide.svg")
                   )
                 ),
               ],
