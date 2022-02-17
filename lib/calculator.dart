@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
                   ),
                   Flexible(
                     child: TextFormField(
-                      obscureText: true,
+                      // obscureText: true,
                       decoration: InputDecoration(
                           suffixIcon: IconButton(
                               onPressed: () {
@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                   ),
                   Flexible(
                     child: TextFormField(
-                      obscureText: true,
+                      // obscureText: true,
                       decoration: InputDecoration(
                           suffixIcon: IconButton(
                               onPressed: () {
@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
                   ),
                   Flexible(
                     child: TextFormField(
-                      obscureText: true,
+                      // obscureText: true,
                       decoration: InputDecoration(
                           suffixIcon: IconButton(
                               onPressed: () {
