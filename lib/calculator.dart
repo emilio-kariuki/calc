@@ -161,7 +161,7 @@ class _HomeState extends State<Home> {
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      suffixIcon: IconButton(
+                        suffixIcon: IconButton(
                             onPressed: () {
                               setState(() {
                                 num_2.clear();
@@ -207,7 +207,9 @@ class _HomeState extends State<Home> {
                 SizedBox(width: size.width * 0.13),
                 GestureDetector(
                   onTap: () {
-                    setState(() {});
+                    setState(() {
+                      doAddition();
+                    });
                   },
                   child: Container(
                       height: size.height * 0.16,
@@ -217,20 +219,27 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
-                          child: SvgPicture.asset("assets/add.svg",
+                          child: SvgPicture.asset("assets/addition.svg",
                               height: size.height * 0.04))),
                 ),
                 SizedBox(width: size.width * 0.04),
-                Container(
-                    height: size.height * 0.16,
-                    width: size.width * 0.32,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                        child: SvgPicture.asset("assets/multiply.svg",
-                            height: size.height * 0.06))),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      doMul();
+                    });
+                  },
+                  child: Container(
+                      height: size.height * 0.16,
+                      width: size.width * 0.32,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                          child: SvgPicture.asset("assets/multiply.svg",
+                              height: size.height * 0.06))),
+                ),
               ],
             ),
           ),
@@ -239,27 +248,41 @@ class _HomeState extends State<Home> {
             child: Row(
               children: [
                 SizedBox(width: size.width * 0.13),
-                Container(
-                    height: size.height * 0.16,
-                    width: size.width * 0.32,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                        child: SvgPicture.asset("assets/minus.svg",
-                            height: size.height * 0.04))),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      doSub();
+                    });
+                  },
+                  child: Container(
+                      height: size.height * 0.16,
+                      width: size.width * 0.32,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                          child: SvgPicture.asset("assets/minus.svg",
+                              height: size.height * 0.04))),
+                ),
                 SizedBox(width: size.width * 0.04),
-                Container(
-                    height: size.height * 0.16,
-                    width: size.width * 0.32,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                        child: SvgPicture.asset("assets/divide.svg",
-                            height: size.height * 0.06))),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      doDiv();
+                    });
+                  },
+                  child: Container(
+                      height: size.height * 0.16,
+                      width: size.width * 0.32,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                          child: SvgPicture.asset("assets/divide.svg",
+                              height: size.height * 0.06))),
+                ),
               ],
             ),
           )
