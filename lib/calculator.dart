@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
   final num_1 = TextEditingController();
   final num_2 = TextEditingController();
   final output = TextEditingController();
-  int num1=0, num2=0, sum=0;
+  int num1 = 0, num2 = 0, sum = 0;
   void doAddition() {
     setState(() {
       num1 = int.parse(num_1.text);
@@ -85,7 +85,14 @@ class _HomeState extends State<Home> {
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      suffixIcon: Icon(Icons.clear,color: Colors.black),
+                        suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                num_2.clear();
+                              });
+                            },
+                            icon: Icon(Icons.clear),
+                            color: Colors.black),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -116,6 +123,14 @@ class _HomeState extends State<Home> {
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
+                        suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                num_2.clear();
+                              });
+                            },
+                            icon: Icon(Icons.clear),
+                            color: Colors.black),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -146,6 +161,14 @@ class _HomeState extends State<Home> {
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
+                      suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                num_2.clear();
+                              });
+                            },
+                            icon: Icon(Icons.clear),
+                            color: Colors.black),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
