@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
                   ),
                   Flexible(
                     child: TextFormField(
-                       keyboardType: TextInputType.number,
+                      keyboardType: TextInputType.number,
                       // obscureText: true,
                       decoration: InputDecoration(
                           suffixIcon: IconButton(
@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
                   ),
                   Flexible(
                     child: TextFormField(
-                       keyboardType: TextInputType.number,
+                      keyboardType: TextInputType.number,
                       // obscureText: true,
                       decoration: InputDecoration(
                           suffixIcon: IconButton(
@@ -160,32 +160,9 @@ class _HomeState extends State<Home> {
                   SizedBox(
                     width: 5,
                   ),
-                  Flexible(
-                    child: TextFormField(
-                       keyboardType: TextInputType.number,
-                      // obscureText: true,
-                      decoration: InputDecoration(
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  num_2.clear();
-                                });
-                              },
-                              icon: Icon(Icons.clear),
-                              color: Colors.black),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                          // icon: Icon(Icons.mail,size:30,color: Colors.black),
-                          filled: true,
-                          hintStyle: TextStyle(color: Colors.grey[800]),
-                          hoverColor: Colors.red,
-                          hintText: "Output",
-                          // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
-                          fillColor: Colors.grey[200]),
-                      controller: num_1,
-                    ),
-                  ),
+                  Text("$sum",
+                      style:
+                          GoogleFonts.roboto(fontSize: 20, color: Colors.white))
                 ],
               ),
             ),
@@ -210,7 +187,11 @@ class _HomeState extends State<Home> {
                 children: [
                   SizedBox(width: size.width * 0.13),
                   GestureDetector(
-                    onTap: doAddition,
+                    onTap: () {
+                      setState(() {
+                        doAddition();
+                      });
+                    },
                     child: Container(
                         height: size.height * 0.16,
                         width: size.width * 0.32,
