@@ -68,225 +68,227 @@ class _HomeState extends State<Home> {
                 style: GoogleFonts.roboto(
                     fontSize: 28, color: Colors.blueGrey[800]))),
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text("NUM1: ",
-                    style: GoogleFonts.redressed(
-                        fontSize: 24, color: Colors.white)),
-                SizedBox(
-                  width: 5,
-                ),
-                Flexible(
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                num_2.clear();
-                              });
-                            },
-                            icon: Icon(Icons.clear),
-                            color: Colors.black),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        // icon: Icon(Icons.mail,size:30,color: Colors.black),
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[800]),
-                        hoverColor: Colors.red,
-                        hintText: "Input first number",
-                        // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
-                        fillColor: Colors.grey[200]),
-                    controller: num_2,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text("NUM1: ",
+                      style: GoogleFonts.redressed(
+                          fontSize: 24, color: Colors.white)),
+                  SizedBox(
+                    width: 5,
                   ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8, right: 8),
-            child: Row(
-              children: [
-                Text("NUM2: ",
-                    style: GoogleFonts.redressed(
-                        fontSize: 24, color: Colors.white)),
-                SizedBox(
-                  width: 5,
-                ),
-                Flexible(
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                num_2.clear();
-                              });
-                            },
-                            icon: Icon(Icons.clear),
-                            color: Colors.black),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        // icon: Icon(Icons.mail,size:30,color: Colors.black),
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[800]),
-                        hoverColor: Colors.red,
-                        hintText: "Input second number",
-                        // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
-                        fillColor: Colors.grey[200]),
-                    controller: output,
+                  Flexible(
+                    child: TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  num_2.clear();
+                                });
+                              },
+                              icon: Icon(Icons.clear),
+                              color: Colors.black),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                          filled: true,
+                          hintStyle: TextStyle(color: Colors.grey[800]),
+                          hoverColor: Colors.red,
+                          hintText: "Input first number",
+                          // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
+                          fillColor: Colors.grey[200]),
+                      controller: num_2,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text("OUTP: ",
-                    style: GoogleFonts.redressed(
-                        fontSize: 24, color: Colors.white)),
-                SizedBox(
-                  width: 5,
-                ),
-                Flexible(
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                num_2.clear();
-                              });
-                            },
-                            icon: Icon(Icons.clear),
-                            color: Colors.black),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        // icon: Icon(Icons.mail,size:30,color: Colors.black),
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[800]),
-                        hoverColor: Colors.red,
-                        hintText: "Output",
-                        // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
-                        fillColor: Colors.grey[200]),
-                    controller: num_1,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          // SizedBox(height: 10),
-          Row(
-            children: [
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 15.0, right: 10.0),
-                    child: Divider(
-                      color: Colors.white,
-                      height: 60,
-                    )),
+                ],
               ),
-            ],
-          ),
-          SizedBox(height: size.height * 0.03),
-          Padding(
-            padding:
-                const EdgeInsets.only(left: 15, right: 8, top: 8, bottom: 8),
-            child: Row(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Row(
+                children: [
+                  Text("NUM2: ",
+                      style: GoogleFonts.redressed(
+                          fontSize: 24, color: Colors.white)),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Flexible(
+                    child: TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  num_2.clear();
+                                });
+                              },
+                              icon: Icon(Icons.clear),
+                              color: Colors.black),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                          filled: true,
+                          hintStyle: TextStyle(color: Colors.grey[800]),
+                          hoverColor: Colors.red,
+                          hintText: "Input second number",
+                          // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
+                          fillColor: Colors.grey[200]),
+                      controller: output,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text("OUTP: ",
+                      style: GoogleFonts.redressed(
+                          fontSize: 24, color: Colors.white)),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Flexible(
+                    child: TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  num_2.clear();
+                                });
+                              },
+                              icon: Icon(Icons.clear),
+                              color: Colors.black),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                          filled: true,
+                          hintStyle: TextStyle(color: Colors.grey[800]),
+                          hoverColor: Colors.red,
+                          hintText: "Output",
+                          // prefixIcon: Icon(Icons.numbers,color: Colors.blueGrey[900]),
+                          fillColor: Colors.grey[200]),
+                      controller: num_1,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // SizedBox(height: 10),
+            Row(
               children: [
-                SizedBox(width: size.width * 0.13),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      doAddition();
-                    });
-                  },
+                Expanded(
                   child: Container(
-                      height: size.height * 0.16,
-                      width: size.width * 0.32,
-                      decoration: BoxDecoration(
+                      margin: const EdgeInsets.only(left: 15.0, right: 10.0),
+                      child: Divider(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                          child: SvgPicture.asset("assets/addition.svg",
-                              height: size.height * 0.04))),
-                ),
-                SizedBox(width: size.width * 0.04),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      doMul();
-                    });
-                  },
-                  child: Container(
-                      height: size.height * 0.16,
-                      width: size.width * 0.32,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                          child: SvgPicture.asset("assets/multiply.svg",
-                              height: size.height * 0.06))),
+                        height: 60,
+                      )),
                 ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15, right: 8, top: 8),
-            child: Row(
-              children: [
-                SizedBox(width: size.width * 0.13),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      doSub();
-                    });
-                  },
-                  child: Container(
-                      height: size.height * 0.16,
-                      width: size.width * 0.32,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                          child: SvgPicture.asset("assets/minus.svg",
-                              height: size.height * 0.04))),
-                ),
-                SizedBox(width: size.width * 0.04),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      doDiv();
-                    });
-                  },
-                  child: Container(
-                      height: size.height * 0.16,
-                      width: size.width * 0.32,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                          child: SvgPicture.asset("assets/divide.svg",
-                              height: size.height * 0.06))),
-                ),
-              ],
+            SizedBox(height: size.height * 0.03),
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 15, right: 8, top: 8, bottom: 8),
+              child: Row(
+                children: [
+                  SizedBox(width: size.width * 0.13),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        doAddition();
+                      });
+                    },
+                    child: Container(
+                        height: size.height * 0.16,
+                        width: size.width * 0.32,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                            child: SvgPicture.asset("assets/addition.svg",
+                                height: size.height * 0.04))),
+                  ),
+                  SizedBox(width: size.width * 0.04),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        doMul();
+                      });
+                    },
+                    child: Container(
+                        height: size.height * 0.16,
+                        width: size.width * 0.32,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                            child: SvgPicture.asset("assets/multiply.svg",
+                                height: size.height * 0.06))),
+                  ),
+                ],
+              ),
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 15, right: 8, top: 8),
+              child: Row(
+                children: [
+                  SizedBox(width: size.width * 0.13),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        doSub();
+                      });
+                    },
+                    child: Container(
+                        height: size.height * 0.16,
+                        width: size.width * 0.32,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                            child: SvgPicture.asset("assets/minus.svg",
+                                height: size.height * 0.04))),
+                  ),
+                  SizedBox(width: size.width * 0.04),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        doDiv();
+                      });
+                    },
+                    child: Container(
+                        height: size.height * 0.16,
+                        width: size.width * 0.32,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                            child: SvgPicture.asset("assets/divide.svg",
+                                height: size.height * 0.06))),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
