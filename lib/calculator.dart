@@ -15,6 +15,7 @@ class _HomeState extends State<Home> {
   final num_1 = TextEditingController();
   final num_2 = TextEditingController();
   final output = TextEditingController();
+  String? validation;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -29,7 +30,6 @@ class _HomeState extends State<Home> {
                     fontSize: 28, color: Colors.blueGrey[800]))),
       ),
       body: Column(
-        
         children: [
           SizedBox(height: 20),
           Padding(
@@ -123,78 +123,82 @@ class _HomeState extends State<Home> {
             ),
           ),
           // SizedBox(height: 10),
-           Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                        margin: const EdgeInsets.only(left: 15.0, right: 10.0),
-                        child: Divider(
-                          color: Colors.white,
-                          height: 60,
-                        )),
-                  ),
-                ],
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 15.0, right: 10.0),
+                    child: Divider(
+                      color: Colors.white,
+                      height: 60,
+                    )),
               ),
-              SizedBox(height: size.height * 0.03),
+            ],
+          ),
+          SizedBox(height: size.height * 0.03),
           Padding(
-            padding: const EdgeInsets.only(left: 15,right: 8,top:8,bottom:8),
+            padding:
+                const EdgeInsets.only(left: 15, right: 8, top: 8, bottom: 8),
             child: Row(
               children: [
                 SizedBox(width: size.width * 0.13),
-                Container(
-                  height: size.height * 0.16,
-                  width: size.width * 0.32,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: SvgPicture.asset("assets/add.svg")
-                  )
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      
+                    });
+                  },
+                  child: Container(
+                      height: size.height * 0.16,
+                      width: size.width * 0.32,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                          child: SvgPicture.asset("assets/add.svg",
+                              height: size.height * 0.04))),
                 ),
                 SizedBox(width: size.width * 0.04),
                 Container(
-                  height: size.height * 0.16,
-                  width: size.width * 0.32,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: SvgPicture.asset("assets/multiply.svg")
-                  )
-                ),
+                    height: size.height * 0.16,
+                    width: size.width * 0.32,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                        child: SvgPicture.asset("assets/multiply.svg",
+                            height: size.height * 0.06))),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 15,right: 8,top:8),
+            padding: const EdgeInsets.only(left: 15, right: 8, top: 8),
             child: Row(
               children: [
                 SizedBox(width: size.width * 0.13),
                 Container(
-                  height: size.height * 0.16,
-                  width: size.width * 0.32,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: SvgPicture.asset("assets/minus.svg")
-                  )
-                ),
+                    height: size.height * 0.16,
+                    width: size.width * 0.32,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                        child: SvgPicture.asset("assets/minus.svg",
+                            height: size.height * 0.04))),
                 SizedBox(width: size.width * 0.04),
                 Container(
-                  height: size.height * 0.16,
-                  width: size.width * 0.32,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: SvgPicture.asset("assets/divide.svg")
-                  )
-                ),
+                    height: size.height * 0.16,
+                    width: size.width * 0.32,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                        child: SvgPicture.asset("assets/divide.svg",
+                            height: size.height * 0.06))),
               ],
             ),
           )
