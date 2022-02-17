@@ -15,7 +15,46 @@ class _HomeState extends State<Home> {
   final num_1 = TextEditingController();
   final num_2 = TextEditingController();
   final output = TextEditingController();
-  String? validation;
+  int num1=0, num2=0, sum=0;
+  void doAddition() {
+    setState(() {
+      num1 = int.parse(num_1.text);
+      num2 = int.parse(num_2.text);
+      sum = num1 + num2;
+    });
+  }
+
+  void doSub() {
+    setState(() {
+      num1 = int.parse(num_1.text);
+      num2 = int.parse(num_2.text);
+      sum = num1 - num2;
+    });
+  }
+
+  void doMul() {
+    setState(() {
+      num1 = int.parse(num_1.text);
+      num2 = int.parse(num_2.text);
+      sum = num1 * num2;
+    });
+  }
+
+  void doDiv() {
+    setState(() {
+      num1 = int.parse(num_1.text);
+      num2 = int.parse(num_2.text);
+      sum = num1 ~/ num2;
+    });
+  }
+
+  void doClear() {
+    setState(() {
+      num_1.text = "0";
+      num_2.text = "0";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -143,10 +182,8 @@ class _HomeState extends State<Home> {
               children: [
                 SizedBox(width: size.width * 0.13),
                 GestureDetector(
-                  onTap: (){
-                    setState(() {
-                      
-                    });
+                  onTap: () {
+                    setState(() {});
                   },
                   child: Container(
                       height: size.height * 0.16,
