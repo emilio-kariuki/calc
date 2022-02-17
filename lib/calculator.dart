@@ -180,7 +180,7 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: SvgPicture.asset("assets/minux.svg")
+                    child: SvgPicture.asset("assets/minus.svg")
                   )
                 ),
                 SizedBox(width: size.width * 0.04),
