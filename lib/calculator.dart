@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import "package:flutter/material.dart";
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
@@ -148,7 +149,7 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Icon(Icons.add,size: 40)
+                    child: SvgPicture.asset("assets/add.svg")
                   )
                 ),
                 SizedBox(width: size.width * 0.04),
