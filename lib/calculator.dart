@@ -187,11 +187,7 @@ class _HomeState extends State<Home> {
                 children: [
                   SizedBox(width: size.width * 0.13),
                   GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        doAddition();
-                      });
-                    },
+                    onTap: doAddition,
                     child: Container(
                         height: size.height * 0.16,
                         width: size.width * 0.32,
