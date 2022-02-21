@@ -180,12 +180,15 @@ class _HomeState extends State<Home> {
               ],
             ),
             SizedBox(height: size.height * 0.03),
-            SizedBox(
-              height:size.height * 0.02,
-              width:size.width * 0.2,
-              child:FlatButton(
-                onPressed: doAddition,
-                child:SvgPicture.asset('assets/add.svg')
+            Material(
+              color: Colors.white,
+              child: SizedBox(
+                height:size.height * 0.08,
+                width:size.width * 0.2,
+                child:FlatButton(
+                  onPressed: doAddition,
+                  child:SvgPicture.asset('assets/add.svg')
+                ),
               ),
             )
           ],
