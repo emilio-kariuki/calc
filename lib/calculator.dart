@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
@@ -180,7 +180,14 @@ class _HomeState extends State<Home> {
               ],
             ),
             SizedBox(height: size.height * 0.03),
-            
+            SizedBox(
+              height:size.height * 0.02,
+              width:size.width * 0.2,
+              child:FlatButton(
+                onPressed: (){},
+                child:SvgPicture.asset('assets/add.svg')
+              ),
+            )
           ],
         ),
       ),
