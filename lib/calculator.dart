@@ -201,7 +201,7 @@ class _HomeState extends State<Home> {
                         ),
                         child: Center(
                             child: SvgPicture.asset("assets/addition.svg",
-                                height: size.height * 0.04))),
+                                height: size.height * 0.03))),
                   ),
                   SizedBox(width: size.width * 0.04),
                   GestureDetector(
