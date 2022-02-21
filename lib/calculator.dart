@@ -184,7 +184,7 @@ class _HomeState extends State<Home> {
               height:size.height * 0.02,
               width:size.width * 0.2,
               child:FlatButton(
-                onPressed: (){},
+                onPressed: doAddition,
                 child:SvgPicture.asset('assets/add.svg')
               ),
             )
